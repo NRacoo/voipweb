@@ -13,6 +13,7 @@
     export function LoginComponent({ onLoginSuccess }: LoginComponentProps) {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [password, setPassword] = useState("");
+    const [IpNumber, setIpNumber] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState("");
 
@@ -84,6 +85,17 @@
                     onChange={(e) => setPassword(e.target.value)}
                     required
                     type="password"
+                    className="text-center text-lg"
+                    />
+                </div>
+                <div className="space-y-2">
+                    <Input 
+                    id = "IP"
+                    placeholder = "IP"
+                    value = {IpNumber}
+                    onChange={(e)=> setIpNumber(e.target.value)}
+                    required
+                    type="IP"
                     className="text-center text-lg"
                     />
                 </div>
