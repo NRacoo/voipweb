@@ -40,9 +40,6 @@
         setIsMenuOpen(!isMenuOpen)
     }
 
-    const handleLogin = () => {
-        router.push("/login")
-    }
 
     return (
         <header className="border-b relative z-20">
@@ -60,6 +57,14 @@
             <Link href="/about" className={`text-sm font-medium ${pathname === "/about" ? "text-primary" : "text-muted-foreground hover:text-primary"}`}>
                 About Us
             </Link>
+            {/* Logout dalam dashboard */}
+            {isAuthenticated && (
+            <div className="flex items-center space-x-4">
+                <span className="text-sm text-muted-foreground">{phoneNumber}</span>
+                <Button variant="outline" size="sm" onClick={handleLogout}>
+                Logout
+                </Button>
+            </div>)}
             </nav>
 
             {/* Desktop Authentication */}
