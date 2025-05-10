@@ -4,6 +4,7 @@
     import { Phone } from "lucide-react";
     import { Button } from "@/components/ui/button";
     import { Input } from "@/components/ui/input";
+    import React from "react";
     import { Card, CardContent, CardFooter, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
     interface LoginComponentProps {
@@ -20,7 +21,8 @@
     const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsLoading(true);
-        setError("");
+        setError(""); 
+    
 
         try {
         // Simulate API call with delay

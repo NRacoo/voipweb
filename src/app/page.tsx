@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
-import { LoginComponent } from "./login/Login";
+import { LoginComponent } from "./login/page";
 
 export default function HomePage() {
   const [isAuthenticated, setIsAuthenticated] = useState<boolean | null>(null);
